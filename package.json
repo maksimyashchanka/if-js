@@ -1,0 +1,25 @@
+{
+  "name": "ac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maksimyashchanka/if-js.git"
+  },
+  "author": "Maksim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maksimyashchanka/if-js/issues"
+  },
+  "homepage": "https://github.com/maksimyashchanka/if-js#readme",
+  "devDependencies": {
+    "eslint": "^8.3.0"
+  },
+  "dependencies": {
+    "husky": "^7.0.4"
+  }
+}
