@@ -11,12 +11,12 @@ console.log(user); // Maksim
 
 
 let test = 1;
-let test1 = test++;
+ test++;
 console.log(test); //2
 
 
 let test2 = 1;
-let test3 = test2--;
+ test2--;
 console.log(test2); //0
 
 
