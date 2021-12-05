@@ -1,23 +1,23 @@
-/*const user = ("John Doe");
-console.log(user) //John Doe
+let user = ("John Doe");
+console.log(user); //John Doe
 
 
 const student = ("Maksim");
-console.log( student) // Maksim
+console.log(student); // Maksim
 
 
-user2 = (student);
-console.log(user2) // Maksim
+user = student;
+console.log(user); // Maksim
 
 
-let test = (1);
-let test2 = (test++);
-console.log(test) //2
+let test = 1;
+let test1 = test++;
+console.log(test); //2
 
 
-let test3 = (1);
-let test4 = test3--;
-console.log(test3) //0
+let test2 = 1;
+let test3 = test2--;
+console.log(test2); //0
 
 
 const test6 = Boolean ("");
@@ -30,21 +30,20 @@ let arr = [2, 3, 5, 8 ]
         result *= arr[i]
     }
     console.log(result) //240
-*/
 
 
 
 let lol = [2, 5, 8, 15, 0, 6, 20, 3]
     for( let i = 0; i < lol.length; i++) {
         if(lol[i] > 5 && lol[i] < 10) {
-            console.log(lol[i]);
+            console.log(lol[i]); // 6 8
 
         }
     }
 
 
 
-    /*
+
 let num = [2, 5, 8, 15, 0, 6, 20, 3]
     for( let i = 0; i < num.length; i++ )
     {
@@ -53,7 +52,7 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
             console.log(num[i]); //2 8 0 6 20
         }
 }
-*/
+
 
 
 
