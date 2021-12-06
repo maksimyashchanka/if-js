@@ -12,11 +12,13 @@ console.log(user); // Maksim
 
 let test = 1;
  test++;
-console.log(test + '1'); //21
+console.log(test) //2
 
-let test2 = 1;
- test2--;
-console.log(test2); //0
+test += '1';
+console.log(test) //21
+
+test--;
+console.log(test); //20
 
 
 const test6 = Boolean ("");
