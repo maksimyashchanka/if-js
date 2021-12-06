@@ -20,9 +20,8 @@ console.log(test) //21
 test--;
 console.log(test); //20
 
-
-const test6 = Boolean ("");
-console.log( typeof test6)  // Boolean
+test = true;
+console.log(typeof test)  // Boolean
 
 
 let result = 1;
