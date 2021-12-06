@@ -12,8 +12,7 @@ console.log(user); // Maksim
 
 let test = 1;
  test++;
-console.log(test); //2
-
+console.log(test + '1'); //21
 
 let test2 = 1;
  test2--;
