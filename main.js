@@ -1,4 +1,4 @@
-let user = ("John Doe");
+/*let user = ("John Doe");
 console.log(user); //John Doe
 
 
@@ -52,13 +52,71 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
             console.log(num[i]); //2 8 0 6 20
         }
 }
+*/
 
 
 
+//Palindrome
+
+function palindrome(str) {
+    let strPalindrome = str.split("").reverse("").join("");
+    if (strPalindrome === str) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(palindrome("radar"));
+
+//Min
+function min(a, b) {
+    if (a < b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+let result = min(24, 42);
+console.log(result);
 
 
+function isMin(a, b) {
+    return a < b ? a : b;
+}
+
+let isResultMim = isMin(24, 42);
+console.log(isResultMim);
+
+//Max
+function max(a, b) {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+let isResult = max(24, 42);
+console.log(isResult);
 
 
+function isMax(a, b) {
+    return a > b ? a : b;
+}
+
+let isResultMax = isMax(24, 42);
+console.log(isResultMax);
+
+
+// 10 случайных чисел
+let arr = [];
+while (arr.length < 10) {
+    let r = Math.floor(Math.random() * 100) + 1;
+    if (arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);
 
 
 
