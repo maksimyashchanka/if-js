@@ -110,13 +110,32 @@ let isResultMax = isMax(24, 42);
 console.log(isResultMax);
 
 
-// 10 случайных чисел
-let arr = [];
-while (arr.length < 10) {
-    let r = Math.floor(Math.random() * 100) + 1;
-    if (arr.indexOf(r) === -1) arr.push(r);
+
+
+let mas = [];
+const lowNumber = 0;
+const higNumber = 100;
+for(let i = 0; i < 10; i++){
+    mas.push(Math.floor(Math.random() * (higNumber + 1) + Math.ceil(lowNumber)));
 }
-console.log(arr);
+console.log(mas);
+function zero(newArray){
+    let masZero = [];
+    for(let elementArray of newArray){
+        if(elementArray.toString().includes("0")){
+            elementArray = elementArray.toString();
+            let reg = 0;
+            elementArray = elementArray.replaceAll(reg, "zero");
+        }
+        masZero.push(elementArray);
+    }
+    return masZero;
+}
+console.log(zero(mas));
+
+
+
+
 
 
 
