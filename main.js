@@ -57,7 +57,7 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
 
 
 //Palindrome
-
+/*
 function palindrome(str) {
     let strPalindrome = str.split("").reverse("").join("");
     if (strPalindrome === str) {
@@ -132,9 +132,33 @@ function zero(newArray){
     return masZero;
 }
 console.log(zero(mas));
+*/
 
 
+const date = new Date();
+console.log(date. getFullYear()); //Год
+console.log(date. getMonth());  //Месяц
+console.log(date. getDate());   //Дата
+console.log(date. getDay());    //День
+console.log(date. getHours());  //Час
+console.log(date. getMinutes());    //Минуты
+console.log(date. getSeconds());    //Секунды
+console.log(date. getTime());   //  1605556458000
 
+
+const days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
+
+function getUserTime(t = new Date(t)){
+    let y = t.getFullYear();
+    let m = t.getMonth() +1;
+    let d = t.getDate();
+    let D = days[t.getDay()];
+
+    console.log(y, m, d, D,);
+    return `${d}.${m}.${y}.${D}`;
+}
+
+console.log(getUserTime(new Date(1606420458000)));
 
 
 
