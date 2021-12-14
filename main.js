@@ -135,6 +135,47 @@ console.log(zero(mas));
 
 
 
+function curry(number1){
+    return function (number2){
+        return number1 + number2;
+    }
+
+}
+console.log(curry(5)(2)); //7
+
+
+
+const arrColors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+
+const textOne = document.getElementById("text1");
+const textTwo = document.getElementById("text2");
+const textThree = document.getElementById("text3");
+
+function changeColor () {
+    let color = 0;
+    return function () {
+        this.style.color = arrColors[color];
+        color++;
+        if (color === arrColors.length) {
+            color = 0;
+        }
+    }
+}
+
+textOne.addEventListener('click', changeColor());
+textTwo.addEventListener('click', changeColor());
+textThree.addEventListener('click', changeColor());
+
+
+
+
+
+
+
+
+
+
+
 
 
 
