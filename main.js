@@ -52,12 +52,12 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
             console.log(num[i]); //2 8 0 6 20
         }
 }
-*/
+
 
 
 
 //Palindrome
-/*
+
 function palindrome(str) {
     let strPalindrome = str.split("").reverse("").join("");
     if (strPalindrome === str) {
@@ -132,7 +132,7 @@ function zero(newArray){
     return masZero;
 }
 console.log(zero(mas));
-*/
+
 
 
 const date = new Date();
@@ -164,10 +164,55 @@ function getUserTime(t = new Date(t)){
 
 console.log(getUserTime(new Date(1606420458000)));
 
+*/
 
 
+let data = [
+    {
+        country: 'Russia',
+        city: 'Saint Petersburg',
+        hotel: 'Hotel Leopold',
+    },
+    {
+        country: 'Spain',
+        city: 'Santa Cruz de Tenerife',
+        hotel: 'Apartment Sunshine',
+    },
+    {
+        country: 'Slowakia',
+        city: 'Vysokie Tatry',
+        hotel: 'Villa Kunerad',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hostel Friendship',
+    },
+    {
+        country: 'Indonesia',
+        city: 'Bali',
+        hotel: 'Ubud Bali Resort&SPA',
+    },
+    {
+        country: 'Netherlands',
+        city: 'Rotterdam',
+        hotel: 'King Kong Hostel',
+    },
+    {
+        country: 'Marocco',
+        city: 'Ourika',
+        hotel: 'Rokoko Hotel',
+    },
+    {
+        country: 'Germany',
+        city: 'Berlin',
+        hotel: 'Hotel Rehberge Berlin Mitte',
+    },
+];
 
+for (let i = 0; i < data.length; i++ )
 
+    console.log(data.includes(2));
 
 
 
