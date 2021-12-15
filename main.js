@@ -146,6 +146,10 @@ console.log(date. getSeconds());    //Секунды
 console.log(date. getTime());   //  1605556458000
 
 
+
+
+
+
 const days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
 
 function getUserTime(t = new Date(t)){
@@ -159,6 +163,10 @@ function getUserTime(t = new Date(t)){
 }
 
 console.log(getUserTime(new Date(1606420458000)));
+
+
+
+
 
 
 
