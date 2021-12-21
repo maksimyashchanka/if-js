@@ -144,7 +144,7 @@ console.log(date. getHours());  //Час
 console.log(date. getMinutes());    //Минуты
 console.log(date. getSeconds());    //Секунды
 console.log(date. getTime());   //  1605556458000
-
+*/
 
 
 
@@ -152,7 +152,7 @@ console.log(date. getTime());   //  1605556458000
 
 const days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
 
-function getUserTime(t = new Date(t)){
+function getUserTime(t = new Date()){
     let y = t.getFullYear();
     let m = t.getMonth() +1;
     let d = t.getDate();
@@ -164,59 +164,69 @@ function getUserTime(t = new Date(t)){
 
 console.log(getUserTime(new Date(1606420458000)));
 
-*/
 
 
-let data = [
+
+const data = [
     {
-        country: 'Russia',
-        city: 'Saint Petersburg',
-        hotel: 'Hotel Leopold',
+        country: "Russia",
+        city: "Saint Petersburg",
+        hotel: "Hotel Leopold",
     },
     {
-        country: 'Spain',
-        city: 'Santa Cruz de Tenerife',
-        hotel: 'Apartment Sunshine',
+        country: "Spain",
+        city: "Santa Cruz de Tenerife",
+        hotel: "Apartment Sunshine",
     },
     {
-        country: 'Slowakia',
-        city: 'Vysokie Tatry',
-        hotel: 'Villa Kunerad',
+        country: "Slowakia",
+        city: "Vysokie Tatry",
+        hotel: "Villa Kunerad",
     },
     {
-        country: 'Germany',
-        city: 'Berlin',
-        hotel: 'Hostel Friendship',
+        country: "Germany",
+        city: "Berlin",
+        hotel: "Hostel Friendship",
     },
     {
-        country: 'Indonesia',
-        city: 'Bali',
-        hotel: 'Ubud Bali Resort&SPA',
+        country: "Indonesia",
+        city: "Bali",
+        hotel: "Ubud Bali Resort&SPA",
     },
     {
-        country: 'Netherlands',
-        city: 'Rotterdam',
-        hotel: 'King Kong Hostel',
+        country: "Netherlands",
+        city: "Rotterdam",
+        hotel: "King Kong Hostel",
     },
     {
-        country: 'Marocco',
-        city: 'Ourika',
-        hotel: 'Rokoko Hotel',
+        country: "Marocco",
+        city: "Ourika",
+        hotel: "Rokoko Hotel",
     },
     {
-        country: 'Germany',
-        city: 'Berlin',
-        hotel: 'Hotel Rehberge Berlin Mitte',
+        country: "Germany",
+        city: "Berlin",
+        hotel: "Hotel Rehberge Berlin Mitte",
     },
 ];
 
-for (let i = 0; i < data.length; i++ )
+const newData = [];
+const resultOfSearch = [];
+for (let i = 0; i < data.length; i++) {
+    newData.push(`${data[i].country}, ${data[i].city}, ${data[i].hotel}`);
+}
 
-    console.log(data.includes(2));
-
-
-
-
+function search(str) {
+    for (let g = 0; g < newData.length; g++) {
+        if ((newData[g].toLowerCase()).includes(str.toLowerCase())) {
+            resultOfSearch.push(newData[g]);
+        }
+    }
+    if (resultOfSearch.length !== 0) {
+        console.log(resultOfSearch);
+    }
+}
+search("Russia");
 
 
 
