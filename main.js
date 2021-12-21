@@ -1,4 +1,4 @@
-/*let user = ("John Doe");
+let user = ("John Doe");
 console.log(user); //John Doe
 
 
@@ -78,16 +78,16 @@ function min(a, b) {
     }
 }
 
-let result = min(24, 42);
-console.log(result);
+let isResultat = min(24, 42);
+console.log(isResultat);
 
 
 function isMin(a, b) {
     return a < b ? a : b;
 }
 
-let isResultMim = isMin(24, 42);
-console.log(isResultMim);
+let isResulMim = isMin(24, 42);
+console.log(isResulMim);
 
 //Max
 function max(a, b) {
@@ -98,16 +98,16 @@ function max(a, b) {
     }
 }
 
-let isResult = max(24, 42);
-console.log(isResult);
+let isResu = max(24, 42);
+console.log(isResu);
 
 
 function isMax(a, b) {
     return a > b ? a : b;
 }
 
-let isResultMax = isMax(24, 42);
-console.log(isResultMax);
+let isResMax = isMax(24, 42);
+console.log(isResMax);
 
 
 
@@ -144,7 +144,7 @@ console.log(date. getHours());  //Час
 console.log(date. getMinutes());    //Минуты
 console.log(date. getSeconds());    //Секунды
 console.log(date. getTime());   //  1605556458000
-*/
+
 
 
 
