@@ -55,7 +55,6 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
 */
 
 
-
 //Palindrome
 
 function palindrome(str) {
@@ -110,19 +109,18 @@ let isResultMax = isMax(24, 42);
 console.log(isResultMax);
 
 
-
-
 let mas = [];
 const lowNumber = 0;
 const higNumber = 100;
-for(let i = 0; i < 10; i++){
+for (let i = 0; i < 10; i++) {
     mas.push(Math.floor(Math.random() * (higNumber + 1) + Math.ceil(lowNumber)));
 }
 console.log(mas);
-function zero(newArray){
+
+function zero(newArray) {
     let masZero = [];
-    for(let elementArray of newArray){
-        if(elementArray.toString().includes("0")){
+    for (let elementArray of newArray) {
+        if (elementArray.toString().includes("0")) {
             elementArray = elementArray.toString();
             let reg = 0;
             elementArray = elementArray.replaceAll(reg, "zero");
@@ -131,27 +129,27 @@ function zero(newArray){
     }
     return masZero;
 }
+
 console.log(zero(mas));
 
 
-
-function curry(number1){
-    return function (number2){
+function curry(number1) {
+    return function (number2) {
         return number1 + number2;
-    }
+    };
 
 }
+
 console.log(curry(5)(2)); //7
 
 
-
-const arrColors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
+const arrColors = ["magenta", "cyan", "firebrick", "springgreen", "skyblue"];
 
 const textOne = document.getElementById("text1");
 const textTwo = document.getElementById("text2");
 const textThree = document.getElementById("text3");
 
-function changeColor () {
+function changeColor() {
     let color = 0;
     return function () {
         this.style.color = arrColors[color];
@@ -159,26 +157,254 @@ function changeColor () {
         if (color === arrColors.length) {
             color = 0;
         }
-    }
+    };
 }
 
-textOne.addEventListener('click', changeColor());
-textTwo.addEventListener('click', changeColor());
-textThree.addEventListener('click', changeColor());
+textOne.addEventListener("click", changeColor());
+textTwo.addEventListener("click", changeColor());
+textThree.addEventListener("click", changeColor());
+
+
+//Lesson-6
+function isPalindrome(t) {
+    return t === t.split("").reverse().join("");
+}
+
+console.log(isPalindrome("radar"));
+console.log(isPalindrome("poker"));
+
+
+const hotels = [
+    {
+        name: "Hotel Leopold",
+        city: "Saint Petersburg",
+        country: "Russia",
+    },
+    {
+        name: "Apartment Sunshine",
+        city: "Santa Cruz de Tenerife",
+        country: "Spain",
+    },
+    {
+        name: "Villa Kunerad",
+        city: "Vysokie Tatry",
+        country: "Slowakia",
+    },
+    {
+        name: "Hostel Friendship",
+        city: "Berlin",
+        country: "Germany",
+    },
+    {
+        name: "Radisson Blu Hotel",
+        city: "Kyiv",
+        country: "Ukraine",
+    },
+    {
+        name: "Paradise Hotel",
+        city: "Guadalupe",
+        country: "Mexico",
+    },
+    {
+        name: "Hotel Grindewald",
+        city: "Interlaken",
+        country: "Switzerland",
+    },
+    {
+        name: "The Andaman Resort",
+        city: "Port Dickson",
+        country: "Malaysia",
+    },
+    {
+        name: "Virgin Hotel",
+        city: "Chicago",
+        country: "USA",
+    },
+    {
+        name: "Grand Beach Resort",
+        city: "Dubai",
+        country: "United Arab Emirates",
+    },
+    {
+        name: "Shilla Stay",
+        city: "Seoul",
+        country: "South Korea",
+    },
+    {
+        name: "San Firenze Suites",
+        city: "Florence",
+        country: "Italy",
+    },
+    {
+        name: "The Andaman Resort",
+        city: "Port Dickson",
+        country: "Malaysia",
+    },
+    {
+        name: "Black Penny Villas",
+        city: "BTDC, Nuca Dua",
+        country: "Indonesia",
+    },
+    {
+        name: "Koko Hotel",
+        city: "Tokyo",
+        country: "Japan",
+    },
+    {
+        name: "Ramada Plaza",
+        city: "Istanbul",
+        country: "Turkey",
+    },
+    {
+        name: "Waikiki Resort Hotel",
+        city: "Hawaii",
+        country: "USA",
+    },
+    {
+        name: "Puro Hotel",
+        city: "Krakow",
+        country: "Poland",
+    },
+    {
+        name: "Asma Suites",
+        city: "Santorini",
+        country: "Greece",
+    },
+    {
+        name: "Cityden Apartments",
+        city: "Amsterdam",
+        country: "Netherlands",
+    },
+    {
+        name: "Mandarin Oriental",
+        city: "Miami",
+        country: "USA",
+    },
+    {
+        name: "Concept Terrace Hotel",
+        city: "Rome",
+        country: "Italy",
+    },
+    {
+        name: "Ponta Mar Hotel",
+        city: "Fortaleza",
+        country: "Brazil",
+    },
+    {
+        name: "Four Seasons Hotel",
+        city: "Sydney",
+        country: "Australia",
+    },
+    {
+        name: "Le Meridien",
+        city: "Nice",
+        country: "France",
+    },
+    {
+        name: "Apart Neptun",
+        city: "Gdansk",
+        country: "Poland",
+    },
+    {
+        name: "Lux Isla",
+        city: "Ibiza",
+        country: "Spain",
+    },
+    {
+        name: "Nox Hostel",
+        city: "London",
+        country: "UK",
+    },
+    {
+        name: "Leonardo Vienna",
+        city: "Vienna",
+        country: "Austria",
+    },
+    {
+        name: "Adagio Aparthotel",
+        city: "Edinburgh",
+        country: "UK",
+    },
+    {
+        name: "Steigenberger Hotel",
+        city: "Hamburg",
+        country: "Germany",
+    },
+];
+
+
+const separatedBetweenCounties = {};
+hotels.forEach(el => {
+    if (separatedBetweenCounties[el.country] &&
+        !separatedBetweenCounties[el.country].includes(el.city)) {
+        separatedBetweenCounties[el.country].push(el.city);
+    } else {
+        separatedBetweenCounties[el.country] = [el.city];
+    }
+});
+console.log(separatedBetweenCounties);
 
 
 
+const people = [
+    {name: 'Maksim', age: 27, cocoby: 5000},
+    {name: 'Vika', age: 16, cocoby: 4900},
+    {name: 'Dima', age: 26, cocoby: 40},
+    {name: 'Stas', age: 23, cocoby: 1000},
+    {name: 'Danila', age: 10, cocoby: 1}
+]
+
+//for(let i = 0; 0 < people.length; i++){
+//console.log(mas[i]);
+//}
+
+
+//for (let person of people ){
+   // console.log(person)
+//}
 
 
 
+//forEach
+//people.forEach(function (person){
+    //    console.log(person);
+//})
+
+//people.forEach(person => console.log(person))
 
 
+//map
+//const newPeo = people.map(person => {
+       // return person.name
+//})
+//console.log(newPeo)
 
 
+//const newPeople = people.map(person => `${person.name} (${person.age})`)
+//console.log(newPeople)
+
+//const newPeopl = people.map(person => person.age * 3)
+//console.log(newPeopl)
+
+//Filter
+//const Kat = []
+//for (let i = 0; i < people.length; i++){
+   // if (people[i].age >= 18){
+      //  Kat.push(people[i])
+    //}
+//}
+//console.log(Kat)
 
 
+//const puk = people.filter(person => {
+    //if(person.age >= 18){
+     //   return true
+    //}
+//})
+//console.log(puk)
 
-
+//const adler = people.filter(person => person.age >= 27)
+//console.log(adler)
 
 
 
