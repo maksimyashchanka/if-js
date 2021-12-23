@@ -52,7 +52,7 @@ let num = [2, 5, 8, 15, 0, 6, 20, 3]
             console.log(num[i]); //2 8 0 6 20
         }
 }
-*/
+
 
 
 
@@ -143,7 +143,7 @@ function curry(number1){
 }
 console.log(curry(5)(2)); //7
 
-
+*/
 
 const arrColors = ['magenta', 'cyan', 'firebrick', 'springgreen', 'skyblue'];
 
@@ -343,12 +343,17 @@ const hotels = [
 const separatedBetweenCounties = {};
 hotels.forEach(el => {
     if (separatedBetweenCounties[el.country] && !separatedBetweenCounties[el.country].includes(el.city)) {
-        separatedBetweenCounties[el.country].push(el.city);         }
+        separatedBetweenCounties[el.country].push(el.city);
+    }
     else {
         separatedBetweenCounties[el.country] = [el.city];
     }
 })
 console.log(separatedBetweenCounties);
+
+
+
+
 
 
 
