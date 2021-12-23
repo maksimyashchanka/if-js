@@ -170,6 +170,8 @@ textThree.addEventListener('click', changeColor());
 
 
 
+
+
 function isPalindrom(t){
     return t === t.split("").reverse().join("");
 }
