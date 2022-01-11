@@ -353,10 +353,34 @@ console.log(separatedBetweenCounties);
 
 
 
+const result = [];
+function getCalendarMonth(daysInMonth, daysInWeek, dayOfWeek) {
+    let weekInMonth = Math.ceil(daysInMonth/daysInWeek - 1);
+    if (daysInMonth === 28) {
+        weekInMonth = 5;
+    }
+    const arrDays = []  ;
+    for (let i = 1; i <= daysInMonth; i++) {
+        arrDays.push(String(i))
+    }
+    for (let i = 0; i < dayOfWeek; i++) {
+        arrDays.unshift(arrDays.pop());
+    }
+    for (let i = 0; i < Math.ceil(arrDays.length/daysInWeek); i++) {
+        result.push(arrDays.slice(i*daysInWeek, i*daysInWeek + daysInWeek));
+    }
+    for (let i = 0; i <= dayOfWeek; i++) {
+        result[weekInMonth].push(arrDays[i])
+    }
+    return result
+}
+
+console.log(getCalendarMonth(31,7,5));
 
 
 
 
+ 
 
 
 
