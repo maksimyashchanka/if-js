@@ -498,78 +498,106 @@
 // deepEqual(obj1, obj3); // false
 
 
-const studentsData = [
-    {
-        firstName: "Василий",
-        lastName: "Петров",
-        admissionYear: 2019,
-        courseName: "Java",
-    },
-    {
-        firstName: "Иван",
-        lastName: "Иванов",
-        admissionYear: 2018,
-        courseName: "JavaScript",
-    },
-    {
-        firstName: "Александр",
-        lastName: "Федоров",
-        admissionYear: 2017,
-        courseName: "Python",
-    },
-    {
-        firstName: "Николай",
-        lastName: "Петров",
-        admissionYear: 2019,
-        courseName: "Android",
-    },
-];
+// const studentsData = [
+//     {
+//         firstName: "Василий",
+//         lastName: "Петров",
+//         admissionYear: 2019,
+//         courseName: "Java",
+//     },
+//     {
+//         firstName: "Иван",
+//         lastName: "Иванов",
+//         admissionYear: 2018,
+//         courseName: "JavaScript",
+//     },
+//     {
+//         firstName: "Александр",
+//         lastName: "Федоров",
+//         admissionYear: 2017,
+//         courseName: "Python",
+//     },
+//     {
+//         firstName: "Николай",
+//         lastName: "Петров",
+//         admissionYear: 2019,
+//         courseName: "Android",
+//     },
+// ];
+//
+//
+// class User {
+//     constructor(firstname, lastname) {
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
+//
+//     get fullName() {
+//         return this.firstname + " " + this.lastname;
+//     }
+// }
+//
+// class Student extends User {
+//     constructor({ firstName, lastName, admissionYear, courseName }) {
+//         super(firstName, lastName);
+//         this.admissionYear = admissionYear;
+//         this.courseName = courseName;
+//     }
+//
+//     get fullname() {
+//         return super.fullName;
+//     }
+//
+//     get course() {
+//         const currentYear = new Date().getFullYear();
+//         return currentYear - this.admissionYear;
+//     }
+// }
+//
+// class Students {
+//     constructor(students) {
+//         this.students = students;
+//     }
+//
+//     sortByCourse = () => this.students.sort((a, b) => a.course - b.course);
+//
+//     getInfo() {
+//         return this.students.forEach((student) => {
+//             console.log(
+//                 `${student.fullname} - ${student.courseName}, ${student.course } курс `
+//             );
+//         });
+//     }
+// }
+// const studentInstances = studentsData.map((student) => new Student(student));
+// const students = new Students(studentInstances);
+// students.sortByCourse();
+// students.getInfo();
 
 
-class User {
-    constructor(firstname, lastname) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-    }
 
-    get fullName() {
-        return this.firstname + " " + this.lastname;
+const colors = {
+    data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
+};
+function* gen() {
+    for(let element of colors.data){
+        yield element;
     }
 }
-
-class Student extends User {
-    constructor({ firstName, lastName, admissionYear, courseName }) {
-        super(firstName, lastName);
-        this.admissionYear = admissionYear;
-        this.courseName = courseName;
-    }
-
-    get fullname() {
-        return super.fullName;
-    }
-
-    get course() {
-        const currentYear = new Date().getFullYear();
-        return currentYear - this.admissionYear;
-    }
+function changeStyle() {
+    let index = 1;
+    return function () {
+        let iterator = gen();
+        for(let i = 0; i < index; i++){
+            this.style.color = iterator.next().value;
+        }
+        iterator.next().done ? index = 1 : index++;
+    };
 }
 
-class Students {
-    constructor(students) {
-        this.students = students;
-    }
+document.getElementById("text1").addEventListener("click", changeStyle());
+document.getElementById("text2").addEventListener("click", changeStyle());
+document.getElementById("text3").addEventListener("click", changeStyle());
 
-    sortByCourse = () => this.students.sort((a, b) => a.course - b.course);
 
-    getInfo() {
-        return this.students.forEach((student) => {
-            console.log(
-                `${student.fullname} - ${student.courseName}, ${student.course } курс `
-            );
-        });
-    }
-}
-const studentInstances = studentsData.map((student) => new Student(student));
-const students = new Students(studentInstances);
-students.sortByCourse();
-students.getInfo();
+
