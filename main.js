@@ -453,4 +453,46 @@ function getCalendarMonth(daysInMonth, daysInWeek, dayOfWeek) {
     return res
 }
 
-console.log(getCalendarMonth(31,7,5))
+console.log(getCalendarMonth(31,7,5));
+
+
+
+const obj1 = {
+    a: 'a',
+    b: {
+        a: 'a',
+        b: 'b',
+        c: {
+            a: 1,
+        },
+    },
+};
+const obj2 = {
+    b: {
+        c: {
+            a: 1,
+        },
+        b: 'b',
+        a: 'a',
+    },
+    a: 'a',
+};
+const obj3 = {
+    a: {
+        c: {
+            a: 'a',
+        },
+        b: 'b',
+        a: 'a',
+    },
+    b: 'b',
+};
+
+const deepEqual = (object1, object2) => {
+    let obj1 = JSON.stringify(object1).split('').sort().join('');
+    let obj2 = JSON.stringify(object2).split('').sort().join('');
+    console.log(obj1 === obj2);
+}
+
+deepEqual(obj1, obj2); // true
+deepEqual(obj1, obj3); // false
