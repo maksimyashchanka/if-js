@@ -130,6 +130,14 @@ buttonCountMinus1.onclick = function() {
  }
 }
 
+document.getElementById("children-button-plus").addEventListener("click", display);
+
+function display(){
+  document.getElementById("demo").innerHTML = Date();
+ }
+
+
+
 
 let buttonCountPlus2 = document.getElementById("rooms-button-plus");
 let buttonCountMinus2 = document.getElementById("rooms-button-minus");

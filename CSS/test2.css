@@ -333,9 +333,13 @@ a {
     left:175px;
     top: 190px;
 }
+.visibiliti{
+    /*display: none;*/
+}
 
 .cont-subtitle{
     padding-top: 30px;
+    color: #333333;
 }
 .select{
     border: 1px solid #3077C6;
