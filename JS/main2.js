@@ -115,6 +115,8 @@ let count1 = document.getElementById("button-count-number");
 let numberChildren = 0;
 
 
+
+
 buttonCountPlus1.onclick = function() {
  if (numberChildren <= 16) {
   numberChildren++;
@@ -122,22 +124,12 @@ buttonCountPlus1.onclick = function() {
  }
 };
 
-
 buttonCountMinus1.onclick = function() {
  if (numberChildren >= 1) {
   numberChildren--;
   count1.innerHTML = numberChildren;
  }
 }
-
-document.getElementById("children-button-plus").addEventListener("click", display);
-
-function display(){
-  document.getElementById("demo").innerHTML = Date();
- }
-
-
-
 
 let buttonCountPlus2 = document.getElementById("rooms-button-plus");
 let buttonCountMinus2 = document.getElementById("rooms-button-minus");
@@ -162,7 +154,9 @@ buttonCountMinus2.onclick = function() {
 }
 
 
-
+// buttonCountPlus1.onclick = function() {
+//  document.querySelector(".visibiliti").style.display = "block";
+// };
 
 
 
