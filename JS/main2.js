@@ -1,3 +1,9 @@
+function view(){
+ document.querySelector(".cont").style.display = "block";
+};
+
+
+
 const data = [
  {
   name: 'Hotel Leopold',
@@ -49,11 +55,11 @@ const data = [
  },
 ];
 
-document.getElementById('im').innerHTML = data.map(user =>
+document.getElementById('im').innerHTML = data.map(hotel =>
     ` <div class="column homes-column__mobail ">
-                <img class="img-homes" src= ${user.imageUrl} alt="Photo"/>
-                <p class="label-1">${user.name},</p>
-                <p class="label-2">${user.city} ${user.country}</p>
+                <img class="img-homes" src= ${hotel.imageUrl} alt="Photo"/>
+                <p class="label-1">${hotel.name},</p>
+                <p class="label-2">${hotel.city} ${hotel.country}</p>
             </div>`
 ).join('')
 
@@ -80,7 +86,72 @@ document.querySelector('.next-slide').addEventListener('click', function (){
  });
 
 
+ let buttonCountPlus = document.getElementById("adults-button-plus");
+let buttonCountMinus = document.getElementById("adults-button-minus");
+let count2 = document.getElementById("buttonCountNumber");
+let numberAdults = 0;
 
+
+buttonCountPlus.onclick = function() {
+ if (numberAdults <= 29) {
+  numberAdults++;
+  count2.innerHTML = numberAdults;
+ }
+};
+
+
+buttonCountMinus.onclick = function() {
+ if (numberAdults >= 1) {
+  numberAdults--;
+  count2.innerHTML = numberAdults;
+
+ }
+}
+
+
+let buttonCountPlus1 = document.getElementById("children-button-plus");
+let buttonCountMinus1 = document.getElementById("children-button-minus");
+let count1 = document.getElementById("button-count-number");
+let numberChildren = 0;
+
+
+buttonCountPlus1.onclick = function() {
+ if (numberChildren <= 16) {
+  numberChildren++;
+  count1.innerHTML = numberChildren;
+ }
+};
+
+
+buttonCountMinus1.onclick = function() {
+ if (numberChildren >= 1) {
+  numberChildren--;
+  count1.innerHTML = numberChildren;
+ }
+}
+
+
+let buttonCountPlus2 = document.getElementById("rooms-button-plus");
+let buttonCountMinus2 = document.getElementById("rooms-button-minus");
+let count = document.getElementById("btn-count-number");
+let numberRooms = 0;
+
+
+buttonCountPlus2.onclick = function() {
+ if (numberRooms <= 29) {
+  numberRooms++;
+  count.innerHTML = numberRooms;
+
+ }
+};
+
+buttonCountMinus2.onclick = function() {
+ if (numberRooms >= 1) {
+  numberRooms--;
+  count.innerHTML = numberRooms;
+
+ }
+}
 
 
 

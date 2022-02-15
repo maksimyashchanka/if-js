@@ -134,11 +134,13 @@ a {
     justify-content: space-between;
     align-items: center;
 
+
 }
 
 .form-input__check-in {
     display: none;
     flex-direction: row;
+
 }
 
 .main-form-block {
@@ -219,10 +221,113 @@ a {
 /*}*/
 
 .cont{
-    height: 150px;
+    height: 160px;
     width: 250px;
     border: 2px solid #3077C6;
-    background: #EAF0F9;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+    display: none;
+
+}
+
+.adults{
+    padding-top: 25px;
+    font-size: 16px;
+}
+.children{
+    padding-top: 23px;
+    padding-bottom: 23px;
+    font-size: 16px;
+}
+
+.rooms{
+    font-size: 16px;
+}
+
+
+.buttonPlus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 200px;
+    top: 95px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+
+.buttonMinus{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left:130px;
+    top: 95px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+.buttonNumber{
+    position: absolute;
+    left:175px;
+    top: 100px;
+
+}
+
+
+.buttonPlus1{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 200px;
+    top: 140px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+
+.buttonMinus1{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left:130px;
+    top: 140px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+.buttonNumber1{
+    position: absolute;
+    left:175px;
+    top: 145px;
+}
+
+.buttonPlus2{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 200px;
+    top: 185px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+
+.buttonMinus2{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left:130px;
+    top: 185px;
+    border:1px solid #3077C6;
+    color: #3077C6;
+    font-size: 20px;
+}
+.buttonNumber2{
+    position: absolute;
+    left:175px;
+    top: 190px;
 
 }
 
@@ -391,4 +496,19 @@ div.column:not(:last-child) {
     left: -23px;
     bottom: 350px;
     transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+#counter {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
 }
