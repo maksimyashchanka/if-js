@@ -70,7 +70,7 @@ const  sliderLine = document. querySelector('.slider-line');
 
 document.querySelector('.next-slide').addEventListener('click', function (){
     offset = offset + 296;
-    if (offset > 1300){
+    if (offset > 1320){
         offset = 0;
     }
     sliderLine.style.left = - offset + 'px';
