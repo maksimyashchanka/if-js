@@ -16,12 +16,13 @@
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
 /*Header*/
 .header-container {
     background: url("../img/header-444.png") no-repeat;
@@ -125,7 +126,6 @@ a {
     font-size: 50px;
     padding-bottom: 145px;
     color: #ffffff;
-
     font-weight: 500;
 }
 
@@ -136,6 +136,7 @@ a {
 
 
 }
+
 
 .form-input__check-in {
     display: none;
@@ -149,6 +150,8 @@ a {
     border: none;
     max-width: 1232px;
     width: 100%;
+
+
 }
 
 .destination-label {
@@ -165,6 +168,7 @@ a {
     bottom: 80px;
     color: #ffffff;
 }
+
 .number-label {
     position: absolute;
     right: 50px;
@@ -172,17 +176,24 @@ a {
     color: #ffffff;
 
 }
+
 .top-section__destination {
     width: 45%;
     position: relative;
+
+
 }
+
 .top-section__data {
     width: 25%;
     position: relative;
+
 }
+
 .top-section__number {
     width: 30%;
     position: relative;
+
 }
 
 .top-section__button {
@@ -206,6 +217,10 @@ a {
     text-align: center;
 }
 
+.section-input {
+    border-radius: 8px 0 0 8px;
+}
+
 .top-section__input:focus {
     outline-offset: 0;
     box-shadow: inset 0 0 0 3px #F5BD41;
@@ -220,10 +235,10 @@ a {
 /*    background: #EAF0F9;*/
 /*}*/
 
-.cont{
+.cont {
     height: 250px;
     width: 250px;
-    border:  #3077C6;
+    border: #3077C6;
     background: #ffffff;
     border-radius: 10px;
     margin-top: 10px;
@@ -232,12 +247,13 @@ a {
 
 }
 
-.adults{
+.adults {
     padding-top: 25px;
     font-size: 16px;
     color: #333333;
 }
-.children{
+
+.children {
     padding-top: 23px;
     padding-bottom: 23px;
     font-size: 16px;
@@ -245,105 +261,108 @@ a {
 
 }
 
-.rooms{
+.rooms {
     font-size: 16px;
     color: #333333;
 }
 
 
-.buttonPlus{
+.buttonPlus {
     height: 30px;
     width: 30px;
     position: absolute;
     left: 200px;
     top: 95px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
 
-.buttonMinus{
+.buttonMinus {
     height: 30px;
     width: 30px;
     position: absolute;
-    left:130px;
+    left: 130px;
     top: 95px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
-.buttonNumber{
+
+.buttonNumber {
     position: absolute;
-    left:175px;
+    left: 175px;
     top: 100px;
 
 }
 
 
-.buttonPlus1{
+.buttonPlus1 {
     height: 30px;
     width: 30px;
     position: absolute;
     left: 200px;
     top: 140px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
 
-.buttonMinus1{
+.buttonMinus1 {
     height: 30px;
     width: 30px;
     position: absolute;
-    left:130px;
+    left: 130px;
     top: 140px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
-.buttonNumber1{
+
+.buttonNumber1 {
     position: absolute;
-    left:175px;
+    left: 175px;
     top: 145px;
 }
 
-.buttonPlus2{
+.buttonPlus2 {
     height: 30px;
     width: 30px;
     position: absolute;
     left: 200px;
     top: 185px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
 
-.buttonMinus2{
+.buttonMinus2 {
     height: 30px;
     width: 30px;
     position: absolute;
-    left:130px;
+    left: 130px;
     top: 185px;
-    border:1px solid #3077C6;
+    border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
 }
-.buttonNumber2{
+
+.buttonNumber2 {
     position: absolute;
-    left:175px;
+    left: 175px;
     top: 190px;
 }
-.visibiliti{
+
+.visibiliti {
     /*display: none;*/
-
-
 }
 
-.cont-subtitle{
+.cont-subtitle {
     padding-top: 30px;
     color: #333333;
 }
-.select{
+
+.select {
     border: 1px solid #3077C6;
     padding-left: 10px;
     margin-top: 15px;
@@ -352,7 +371,8 @@ a {
     font-size: 12px;
     color: #333333;
 }
-.select:focus{
+
+.select:focus {
     outline: none;
 }
 
@@ -366,7 +386,6 @@ a {
 .google-play {
     margin-right: 16px;
 }
-
 
 
 /*Offer*/
@@ -415,7 +434,6 @@ a {
 div.column:not(:last-child) {
     margin-right: 16px;
 }
-
 
 
 .icon-label {
@@ -489,14 +507,14 @@ div.column:not(:last-child) {
 }
 
 
-.slider{
+.slider {
     min-width: 296px;
     height: 400px;
     overflow: hidden;
     margin-bottom: 120px;
 }
 
-.slider-line{
+.slider-line {
     height: 296px;
     width: 2410px;
     display: flex;
@@ -506,7 +524,7 @@ div.column:not(:last-child) {
 }
 
 
-.next-slide{
+.next-slide {
     height: 40px;
     width: 40px;
     position: absolute;
@@ -514,7 +532,7 @@ div.column:not(:last-child) {
     bottom: 350px;
 }
 
-.end-slide{
+.end-slide {
     height: 40px;
     width: 40px;
     position: absolute;
