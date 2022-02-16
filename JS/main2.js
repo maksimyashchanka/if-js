@@ -3,6 +3,16 @@ function view() {
 };
 
 
+// document.getElementById('number').addEventListener("click", hidden);
+// function hidden() {
+//     let lol = document.getElementById('.cont');
+//     if (lol.style.display =="none"){
+//         lol.style.display = "block";
+//     } else {
+//         lol.style.display = "none"}
+// };
+
+
 const data = [
     {
         name: "Hotel Leopold",
@@ -85,75 +95,68 @@ document.querySelector(".end-slide").addEventListener("click", function () {
 });
 
 
-let buttonCountPlus = document.getElementById("adults-button-plus");
-let buttonCountMinus = document.getElementById("adults-button-minus");
 let count2 = document.getElementById("buttonCountNumber");
 let numberAdults = 0;
-
-
-buttonCountPlus.onclick = function () {
+document.getElementById("adults-button-plus").addEventListener("click", function () {
     if (numberAdults <= 29) {
         numberAdults++;
         count2.innerHTML = numberAdults;
     }
-};
-
-
-buttonCountMinus.onclick = function () {
+});
+document.getElementById("adults-button-minus").addEventListener("click", function () {
     if (numberAdults >= 1) {
         numberAdults--;
         count2.innerHTML = numberAdults;
-
     }
-};
+});
 
 
-let buttonCountPlus1 = document.getElementById("children-button-plus");
-let buttonCountMinus1 = document.getElementById("children-button-minus");
+
+
+
 let count1 = document.getElementById("button-count-number");
-let numberChildren = 0;
+ let numberChildren = 0;
+document.getElementById("children-button-plus").addEventListener("click", plusChildren);
+document.getElementById("children-button-plus").addEventListener("click", selectOld);
+// document.getElementById("children-button-plus").addEventListener("click", minusChildren);
+// document.getElementById("children-button-minus").addEventListener("click", selectOld1);
 
-
-buttonCountPlus1.onclick = function () {
+function plusChildren(){
     if (numberChildren <= 16) {
         numberChildren++;
         count1.innerHTML = numberChildren;
     }
-};
 
-buttonCountMinus1.onclick = function () {
+}
+function selectOld(){
+    document.getElementById("cont-visibility").style.display = "block"
+}
+
+
+document.getElementById("children-button-minus").addEventListener("click", function () {
     if (numberChildren >= 1) {
         numberChildren--;
         count1.innerHTML = numberChildren;
     }
-};
+});
 
-let buttonCountPlus2 = document.getElementById("rooms-button-plus");
-let buttonCountMinus2 = document.getElementById("rooms-button-minus");
+
 let count = document.getElementById("btn-count-number");
 let numberRooms = 0;
-
-
-buttonCountPlus2.onclick = function () {
+document.getElementById("rooms-button-plus").addEventListener("click", function () {
     if (numberRooms <= 29) {
         numberRooms++;
         count.innerHTML = numberRooms;
-
     }
-};
-
-buttonCountMinus2.onclick = function () {
+});
+document.getElementById("rooms-button-minus").addEventListener("click", function () {
     if (numberRooms >= 1) {
         numberRooms--;
         count.innerHTML = numberRooms;
-
     }
-};
+});
 
 
-// buttonCountPlus1.onclick = function() {
-//  document.querySelector(".visibiliti").style.display = "block";
-// };
 
 
 
