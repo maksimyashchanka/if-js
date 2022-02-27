@@ -236,7 +236,7 @@ a {
 /*}*/
 
 .cont {
-    height: 250px;
+    height:auto;
     width: 250px;
     border: #3077C6;
     background: #ffffff;
@@ -244,18 +244,19 @@ a {
     margin-top: 10px;
     padding-left: 20px;
     display: none;
+    padding-bottom: 5px;
 
 }
 
 .adults {
-    padding-top: 25px;
+    padding-top: 14px;
     font-size: 16px;
     color: #333333;
 }
 
 .children {
     padding-top: 23px;
-    padding-bottom: 23px;
+    padding-bottom: 18px;
     font-size: 16px;
     color: #333333;
 
@@ -272,7 +273,7 @@ a {
     width: 30px;
     position: absolute;
     left: 200px;
-    top: 95px;
+    top: 80px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -283,7 +284,7 @@ a {
     width: 30px;
     position: absolute;
     left: 130px;
-    top: 95px;
+    top: 80px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -292,7 +293,7 @@ a {
 .buttonNumber {
     position: absolute;
     left: 175px;
-    top: 100px;
+    top:85px;
 
 }
 
@@ -302,7 +303,7 @@ a {
     width: 30px;
     position: absolute;
     left: 200px;
-    top: 140px;
+    top: 117px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -313,7 +314,7 @@ a {
     width: 30px;
     position: absolute;
     left: 130px;
-    top: 140px;
+    top: 117px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -322,7 +323,7 @@ a {
 .buttonNumber1 {
     position: absolute;
     left: 175px;
-    top: 145px;
+    top: 120px;
 }
 
 .buttonPlus2 {
@@ -330,7 +331,7 @@ a {
     width: 30px;
     position: absolute;
     left: 200px;
-    top: 185px;
+    top: 155px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -341,7 +342,7 @@ a {
     width: 30px;
     position: absolute;
     left: 130px;
-    top: 185px;
+    top: 155px;
     border: 1px solid #3077C6;
     color: #3077C6;
     font-size: 20px;
@@ -350,7 +351,7 @@ a {
 .buttonNumber2 {
     position: absolute;
     left: 175px;
-    top: 190px;
+    top: 160px;
 }
 
 .visibility {
@@ -359,20 +360,23 @@ a {
 }
 
 .cont-subtitle {
-    padding-top: 30px;
+    padding-top: 15px;
     color: #333333;
 }
 
 .select {
-    margin-top: 10px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    padding: 5px 20px 5px 5px;
-    cursor: pointer;
-    background-color: transparent; /*Прозрачный*/
-    outline: none;
-    border: 1px solid #3077C6;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: fit-content
+/*    -moz-appearance: none;*/
+/*    -webkit-appearance: none;*/
+/*    appearance: none;*/
+/*    padding: 5px 20px 5px 5px;*/
+/*    cursor: pointer;*/
+/*    background-color: transparent; !*Прозрачный*!*/
+/*    outline: none;*/
+/*    border: 1px solid #3077C6;*/
 
 }
 
