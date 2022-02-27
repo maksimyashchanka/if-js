@@ -364,19 +364,43 @@ a {
 }
 
 .select {
+    margin-top: 10px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 5px 20px 5px 5px;
+    cursor: pointer;
+    background-color: transparent; /*Прозрачный*/
+    outline: none;
     border: 1px solid #3077C6;
-    padding-left: 10px;
-    margin-top: 15px;
-    height: 30px;
-    width: 100px;
-    font-size: 12px;
-    color: #333333;
 
 }
 
 .select:focus {
     outline: none;
 }
+
+.select-wrapper{
+    position: relative;
+}
+
+
+/*.select-wrapper::before{*/
+/*    content: "";*/
+/*    */
+/*    position: absolute;*/
+/*        top:25px;*/
+/*        left:76px;*/
+/*        transform: translateY(-50%);*/
+/*        display: block;*/
+/*        pointer-events: none;*/
+/*        width: 0;*/
+/*        height: 0;*/
+/*        border-style:solid;*/
+/*        border-width: 10.4px 6px 0 6px;*/
+/*        border-color: #3077C6 transparent transparent transparent;*/
+/*    }*/
+
 
 .app-google {
     display: flex;

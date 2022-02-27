@@ -1,18 +1,109 @@
+//Header
 function view() {
     document.querySelector(".cont").style.display = "block";
 };
 
 
-// document.getElementById('number').addEventListener("click", hidden);
-// function hidden() {
-//     let lol = document.getElementById('.cont');
-//     if (lol.style.display =="none"){
-//         lol.style.display = "block";
-//     } else {
-//         lol.style.display = "none"}
-// };
+let count2 = document.getElementById("buttonCountNumber");
+let numberAdults = 0;
+document.getElementById("adults-button-plus").addEventListener("click", function () {
+    if (numberAdults <= 29) {
+        numberAdults++;
+        count2.innerHTML = numberAdults;
+    }
+});
+document.getElementById("adults-button-minus").addEventListener("click", function () {
+    if (numberAdults >= 1) {
+        numberAdults--;
+        count2.innerHTML = numberAdults;
+    }
+});
 
 
+
+
+
+let count1 = document.getElementById("button-count-number");
+let numberChildren = 0;
+let childrenButtonPlus = document.getElementById("children-button-plus")
+let selectWrapper = document.getElementById('select-wrapper');
+childrenButtonPlus.addEventListener("click", plusChildren);
+childrenButtonPlus.addEventListener("click", ()=>{
+    const select = document.createElement('select')
+    select.classList.add('select')
+    selectWrapper.appendChild(select);
+    for (let i = 0; i < 18; i++) {
+        let option = document.createElement("option");
+        option.value = i;
+        option.text = `${i} years old`;
+        select.appendChild(option);
+    }
+
+})
+document.getElementById("children-button-plus").addEventListener("click", selectOld);
+
+
+function plusChildren(){
+    if (numberChildren <= 16) {
+        numberChildren++;
+        count1.innerHTML = numberChildren;
+    }
+
+}
+function selectOld(){
+    document.getElementById("cont-visibility").style.display = "block"
+}
+
+
+let childrenButtonMinus = document.getElementById("children-button-minus")
+
+childrenButtonMinus.addEventListener("click", function () {
+    if (numberChildren >= 1) {
+        numberChildren--;
+        count1.innerHTML = numberChildren;
+        const select = document.querySelector('.select-wrapper > select:last-child')
+        selectWrapper.removeChild(select)
+    }
+});
+
+
+let count = document.getElementById("btn-count-number");
+let numberRooms = 0;
+document.getElementById("rooms-button-plus").addEventListener("click", function () {
+    if (numberRooms <= 29) {
+        numberRooms++;
+        count.innerHTML = numberRooms;
+    }
+});
+document.getElementById("rooms-button-minus").addEventListener("click", function () {
+    if (numberRooms >= 1) {
+        numberRooms--;
+        count.innerHTML = numberRooms;
+    }
+});
+
+//  const sel = document.getElementById("selectCont");
+//  sel.addEventListener("change", function (){
+//      console.log(this.value);
+//  })
+// //
+// //
+// const select1 = document.getElementById("selectCont");
+// const selectChildNodes = select1.childNodes;
+// for(let i = 0; i < selectChildNodes.length; i++ ){
+//     let node = selectChildNodes[i];
+//     console.log(node);
+// }
+
+
+
+
+
+
+
+
+
+//Homes
 const data = [
     {
         name: "Hotel Leopold",
@@ -95,66 +186,7 @@ document.querySelector(".end-slide").addEventListener("click", function () {
 });
 
 
-let count2 = document.getElementById("buttonCountNumber");
-let numberAdults = 0;
-document.getElementById("adults-button-plus").addEventListener("click", function () {
-    if (numberAdults <= 29) {
-        numberAdults++;
-        count2.innerHTML = numberAdults;
-    }
-});
-document.getElementById("adults-button-minus").addEventListener("click", function () {
-    if (numberAdults >= 1) {
-        numberAdults--;
-        count2.innerHTML = numberAdults;
-    }
-});
 
-
-
-
-
-let count1 = document.getElementById("button-count-number");
- let numberChildren = 0;
-document.getElementById("children-button-plus").addEventListener("click", plusChildren);
-document.getElementById("children-button-plus").addEventListener("click", selectOld);
-// document.getElementById("children-button-plus").addEventListener("click", minusChildren);
-// document.getElementById("children-button-minus").addEventListener("click", selectOld1);
-
-function plusChildren(){
-    if (numberChildren <= 16) {
-        numberChildren++;
-        count1.innerHTML = numberChildren;
-    }
-
-}
-function selectOld(){
-    document.getElementById("cont-visibility").style.display = "block"
-}
-
-
-document.getElementById("children-button-minus").addEventListener("click", function () {
-    if (numberChildren >= 1) {
-        numberChildren--;
-        count1.innerHTML = numberChildren;
-    }
-});
-
-
-let count = document.getElementById("btn-count-number");
-let numberRooms = 0;
-document.getElementById("rooms-button-plus").addEventListener("click", function () {
-    if (numberRooms <= 29) {
-        numberRooms++;
-        count.innerHTML = numberRooms;
-    }
-});
-document.getElementById("rooms-button-minus").addEventListener("click", function () {
-    if (numberRooms >= 1) {
-        numberRooms--;
-        count.innerHTML = numberRooms;
-    }
-});
 
 
 
