@@ -82,6 +82,16 @@ document.getElementById("rooms-button-minus").addEventListener("click", function
     }
 });
 
+
+
+
+
+
+
+
+
+
+
 //  const sel = document.getElementById("selectCont");
 //  sel.addEventListener("change", function (){
 //      console.log(this.value);
@@ -155,6 +165,7 @@ const data = [
     },
 ];
 
+
 document.getElementById("im").innerHTML = data.map(hotel =>
     ` <div class="column homes-column__mobail ">
                 <img class="img-homes" src= ${hotel.imageUrl} alt="Photo"/>
@@ -163,6 +174,25 @@ document.getElementById("im").innerHTML = data.map(hotel =>
             </div>`
 ).join("");
 
+async function getResponse(){
+    let response = await fetch(' https://fe-student-api.herokuapp.com/api/hotels/popular')
+    let content = await response.json()
+    // console.log(content)
+    let list = document.getElementById('im')
+     let key;
+    for(key in content){
+        list.innerHTML += `
+        <div id ="im" >
+            <img class="imgHomes" src = "${content[key].imageUrl}"/>
+            <p class="label-1">${content[key].name},</p>
+            <p class="label-2">${content[key].city} ${content[key].country}</p>
+          </div>`
+        // console.log(content[key])
+    }
+}
+getResponse()
+
+
 
 let offset = 0; // смещение от левого края
 const sliderLine = document.querySelector(".slider-line");
@@ -170,7 +200,7 @@ const sliderLine = document.querySelector(".slider-line");
 
 document.querySelector(".next-slide").addEventListener("click", function () {
     offset = offset + 296;
-    if (offset > 1320) {
+    if (offset > 3800) {
         offset = 0;
     }
     sliderLine.style.left = -offset + "px";
@@ -180,7 +210,7 @@ document.querySelector(".next-slide").addEventListener("click", function () {
 document.querySelector(".end-slide").addEventListener("click", function () {
     offset = offset - 296;
     if (offset < 0) {
-        offset = 1180;
+        offset = 1560;
     }
     sliderLine.style.left = -offset + "px";
 });
