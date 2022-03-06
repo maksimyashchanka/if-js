@@ -92,6 +92,7 @@ document.getElementById("rooms-button-minus").addEventListener("click", function
 
 
 
+
 //  const sel = document.getElementById("selectCont");
 //  sel.addEventListener("change", function (){
 //      console.log(this.value);
@@ -104,11 +105,6 @@ document.getElementById("rooms-button-minus").addEventListener("click", function
 //     let node = selectChildNodes[i];
 //     console.log(node);
 // }
-
-
-
-
-
 
 
 
@@ -179,7 +175,7 @@ async function getResponse(){
     let content = await response.json()
     // console.log(content)
     let list = document.getElementById('im')
-     let key;
+    let key;
     for(key in content){
         list.innerHTML += `
         <div id ="im" >
@@ -193,14 +189,13 @@ async function getResponse(){
 getResponse()
 
 
-
 let offset = 0; // смещение от левого края
 const sliderLine = document.querySelector(".slider-line");
 
 
 document.querySelector(".next-slide").addEventListener("click", function () {
     offset = offset + 296;
-    if (offset > 3800) {
+    if (offset > 3830) {
         offset = 0;
     }
     sliderLine.style.left = -offset + "px";
@@ -210,7 +205,7 @@ document.querySelector(".next-slide").addEventListener("click", function () {
 document.querySelector(".end-slide").addEventListener("click", function () {
     offset = offset - 296;
     if (offset < 0) {
-        offset = 1560;
+        offset = 1180;
     }
     sliderLine.style.left = -offset + "px";
 });
