@@ -1,4 +1,28 @@
 //Header
+let button = document.getElementById("btn")
+
+
+button.addEventListener("click", function sendRequest (){
+    let search = document.getElementById('search')
+    console.log(search.value);
+    const searchURL = `https://fe-student-api.herokuapp.com/api/hotels?search=${search.value}`;
+     fetch(searchURL).then(res=>{
+         return res.json()
+     }).then(res=>{
+         console.log(res);
+     }).catch(err=>{
+         throw err;
+     })
+})
+
+
+
+
+
+
+
+
+
 function view() {
     document.querySelector(".cont").style.display = "block";
 };
@@ -86,25 +110,26 @@ document.getElementById("rooms-button-minus").addEventListener("click", function
 
 
 
+async function getResponse(){
+    let response = await fetch(' https://fe-student-api.herokuapp.com/api/hotels/popular')
+    let content = await response.json()
+    // console.log(content)
+    let list = document.getElementById('im')
+    let key;
+    for(key in content){
+        list.innerHTML += `
+        <div id ="im" >
+            <img class="imgHomes" src = "${content[key].imageUrl}"/>
+            <p class="label-1">${content[key].name},</p>
+            <p class="label-2">${content[key].city} ${content[key].country}</p>
+          </div>`
+        // console.log(content[key])
+    }
+}
+getResponse()
 
 
 
-
-
-
-
-//  const sel = document.getElementById("selectCont");
-//  sel.addEventListener("change", function (){
-//      console.log(this.value);
-//  })
-// //
-// //
-// const select1 = document.getElementById("selectCont");
-// const selectChildNodes = select1.childNodes;
-// for(let i = 0; i < selectChildNodes.length; i++ ){
-//     let node = selectChildNodes[i];
-//     console.log(node);
-// }
 
 
 
@@ -213,6 +238,21 @@ document.querySelector(".end-slide").addEventListener("click", function () {
 
 
 
+
+//GET
+// let xhttp = new XMLHttpRequest();
+// xhttp.onreadystatechange = function (){
+//     if (this.readyState == 4 && this.status == 200){
+//         myFunction(this.responseText)
+//     }
+// }
+//
+// xhttp.open("GET", "https://fe-student-api.herokuapp.com/api/hotels", true);
+// xhttp.send();
+//
+// function  myFunction(data){
+//     console.log(data);
+// }
 
 
 
