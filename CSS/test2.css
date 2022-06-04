@@ -184,6 +184,10 @@ a {
 
 }
 
+input{
+    font-size: 1rem;
+}
+
 .top-section__data {
     width: 25%;
     position: relative;
@@ -576,7 +580,9 @@ div.column:not(:last-child) {
     transform: rotate(180deg);
 }
 
-
+/*.available{*/
+/*    display: none;*/
+/*}*/
 
 
 
