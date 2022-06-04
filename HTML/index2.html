@@ -111,7 +111,7 @@
             <h1 class="title-Discover ">Discover stays
                 <br>
                 to live, work or just relax</h1>
-            <form  class="main-form"  method="get">
+            <form class="main-form" method="get">
                 <div class="main-form-block">
                     <div class="top-section__destination">
                         <input id="search" class="top-section__input section-input " type="text" autocomplete="off"
@@ -135,7 +135,7 @@
                     </div>
                     <div class="top-section__number" onmousedown="view()">
                         <input class="top-section__input" type="text" id="number" autocomplete="off"
-                               placeholder=" Adults — Children — Room" value=""/>
+                               placeholder=" Adults 0 — Children 0— Room 0" value=""/>
                         <label class="number-label" for="number"></label>
                         <div>
                             <div class="cont">
@@ -145,26 +145,26 @@
                                 <div class="cont-button">
                                     <input class="buttonPlus" type="button" id="adults-button-plus" value="+"/>
                                     <input class="buttonMinus" type="button" id="adults-button-minus" value="-"/>
-                                    <div class="buttonNumber" id="buttonCountNumber">0</div>
+                                    <div class="buttonNumber" id="buttonCountNumber">1</div>
                                     <input type="hidden" value="0"/>
 
                                     <input class="buttonPlus1" type="button" id="children-button-plus" value="+"/>
                                     <input class="buttonMinus1" type="button" id="children-button-minus" value="-"/>
-                                    <div class="buttonNumber1" id="button-count-number">0</div>
+                                    <div class="buttonNumber1" id="button-count-number">1</div>
                                     <input type="hidden" value="0"/>
 
                                     <input class="buttonPlus2 " type="button" id="rooms-button-plus" value="+"/>
                                     <input class="buttonMinus2" type="button" id="rooms-button-minus" value="-"/>
-                                    <div class="buttonNumber2" id="btn-count-number">0</div>
+                                    <div class="buttonNumber2" id="btn-count-number">1</div>
                                     <input type="hidden" value="0"/>
                                     <div class="visibility" id="cont-visibility">
                                         <p class="cont-subtitle">What is the age of the child you’re travelling
                                             with?</p>
-                                            <div class="form-group"  >
-                                                <div class="select-wrapper" id="select-wrapper" >
+                                        <div class="form-group">
+                                            <div class="select-wrapper" id="select-wrapper">
 
-                                                </div>
                                             </div>
+                                        </div>
                                         <div id="demo"></div>
                                     </div>
                                 </div>
@@ -172,7 +172,7 @@
                         </div>
                     </div>
                     <div class="top-section__button">
-                        <button id="btn" class="search" >Search</button>
+                        <button id="btn" class="search">Search</button>
                     </div>
                 </div>
             </form>
@@ -203,9 +203,8 @@
 </section>
 
 
-
-<section class="container-background">
-    <div class="content__wrapper available ">
+<section class="container-background available" id="search-hotels">
+    <div class="content__wrapper">
         <h2 class="title-homes  title-line">Available hotels</h2>
         <div class="slider">
             <div class="slider-line">
