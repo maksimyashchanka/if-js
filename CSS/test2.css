@@ -247,7 +247,6 @@ input{
     border-radius: 10px;
     margin-top: 10px;
     padding-left: 20px;
-    display: none;
     padding-bottom: 5px;
 
 }
@@ -535,6 +534,7 @@ div.column:not(:last-child) {
     color: #BFBFBF;
     text-align: left;
 
+
 }
 
 .strum-homes {
@@ -555,7 +555,26 @@ div.column:not(:last-child) {
 
 .slider-line {
     height: 296px;
-    width: 2500px;
+    width: 2400px;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: 1.05s;
+}
+
+
+.slider2 {
+    min-width: 400px;
+    height: 400px;
+    /*border: 2px solid #000000;*/
+    margin: 30px auto;
+    overflow: hidden;
+
+}
+
+.slider-line2 {
+    height: 400px;
+    width: 1245px;
     display: flex;
     position: relative;
     left: 0;
@@ -567,7 +586,7 @@ div.column:not(:last-child) {
     height: 40px;
     width: 40px;
     position: absolute;
-    right: -15px;
+    right: -25px;
     bottom: 350px;
 }
 
@@ -580,9 +599,40 @@ div.column:not(:last-child) {
     transform: rotate(180deg);
 }
 
-/*.available{*/
-/*    display: none;*/
-/*}*/
+
+.available{
+    display: none;
+}
+
+
+.stroka{
+    padding-left: 450px;
+    font-size: 40px;
+}
+
+
+.end-slide2{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: -25px;
+    bottom: 250px;
+}
+
+.next-slide2{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: -23px;
+    bottom: 250px;
+    transform: rotate(180deg);
+
+}
+
+.shw-block{
+    display: none;
+}
+
 
 
 
