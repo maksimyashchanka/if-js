@@ -150,14 +150,35 @@ const showAllHotels = (data) => {
     ).join("");
 }
 
-//////
+
+
+
+
+///
 async function getResponse() {
     let response = await fetch(' https://fe-student-api.herokuapp.com/api/hotels/popular')
     let content = await response.json()
+    sessionStorage.setItem("popular",JSON.stringify(content))
     showAllHotels(content)
+
+}
+const popularStorage = sessionStorage.getItem('popular');
+const popularItem = JSON.parse(popularStorage)
+
+popularItem?.length > 0 ? showAllHotels(popularItem):getResponse()
+
+
+const  search = document.getElementById('search');
+
+const storageSearch = sessionStorage.getItem('sear') || '';
+
+if(storageSearch.length){
+    search.value = storageSearch;
 }
 
-getResponse()
+search.addEventListener('input', function ({target}){
+    sessionStorage.setItem('sear' , target.value);
+})
 
 
 let offset = 0; // смещение от левого края
