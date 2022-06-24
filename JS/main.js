@@ -601,6 +601,34 @@
 
 
 
+const myForm = document.getElementById("myForm");
+const inpFile = document.getElementById("inpFile");
+
+
+myForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const formData = new FormData()
+
+    console.log(inpFile.files);
+
+    formData.append("inpFile", inpFile.files[0]);
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: ({
+            headers: {
+                'Content-type': 'multipart/form-data; charset=UTF-8',
+            },
+            body: formData,
+        }),
+
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+})
+
+
 
 
 
