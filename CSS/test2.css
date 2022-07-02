@@ -232,12 +232,6 @@ input{
     border-radius: 8px;
 }
 
-/*.top-section__input:focus{*/
-/*    height: 150px;*/
-/*    width: 250px;*/
-/*    border: 2px solid #3077C6;*/
-/*    background: #EAF0F9;*/
-/*}*/
 
 .cont {
     height:auto;
@@ -566,7 +560,6 @@ div.column:not(:last-child) {
 .slider2 {
     min-width: 400px;
     height: 400px;
-    /*border: 2px solid #000000;*/
     margin: 30px auto;
     overflow: hidden;
 
