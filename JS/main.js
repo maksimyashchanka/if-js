@@ -1,4 +1,4 @@
-// /*let user = ("John Doe");
+// let user = ("John Doe");
 // console.log(user); //John Doe
 //
 //
@@ -576,28 +576,59 @@
 
 
 
-const colors = {
-    data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
-};
-function* gen() {
-    for(let element of colors.data){
-        yield element;
-    }
-}
-function changeStyle() {
-    let index = 1;
-    return function () {
-        let iterator = gen();
-        for(let i = 0; i < index; i++){
-            this.style.color = iterator.next().value;
-        }
-        iterator.next().done ? index = 1 : index++;
-    };
-}
+// const colors = {
+//     data: ["magenta", "cyan", "firebrick", "springgreen", "skyblue"],
+// };
+// function* gen() {
+//     for(let element of colors.data){
+//         yield element;
+//     }
+// }
+// function changeStyle() {
+//     let index = 1;
+//     return function () {
+//         let iterator = gen();
+//         for(let i = 0; i < index; i++){
+//             this.style.color = iterator.next().value;
+//         }
+//         iterator.next().done ? index = 1 : index++;
+//     };
+// }
+//
+// document.getElementById("text1").addEventListener("click", changeStyle());
+// document.getElementById("text2").addEventListener("click", changeStyle());
+// document.getElementById("text3").addEventListener("click", changeStyle());
 
-document.getElementById("text1").addEventListener("click", changeStyle());
-document.getElementById("text2").addEventListener("click", changeStyle());
-document.getElementById("text3").addEventListener("click", changeStyle());
+
+
+const myForm = document.getElementById("myForm");
+const inpFile = document.getElementById("inpFile");
+
+
+myForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    const formData = new FormData()
+
+    console.log(inpFile.files);
+
+    formData.append("inpFile", inpFile.files[0]);
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: ({
+            headers: {
+                'Content-type': 'multipart/form-data; charset=UTF-8',
+            },
+            body: formData,
+        }),
+
+    })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+})
+
+
 
 
 
